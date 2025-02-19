@@ -21,15 +21,15 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed w-full left-0 z-50 transition-transform duration-300 ${
+      className={`fixed w-full lg:pt-5 md:pt-5 sm:pt-3 left-0 z-50 transition-transform duration-300 ${
         showNavbar ? "translate-y-0" : "-translate-y-full"
       } bg-gradient-to-b from-black/50 to-transparent text-white`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
-        <div className="flex items-center justify-between h-20">
+      <div className="max-w-7xl mx-auto sm:px-6 lg:px-8 ">
+        <div className="flex items-center justify-between">
           {/* Logo */}
           <div>
-            <img src="src/assets/logo.png" alt="Logo" className="h-20" />
+            <img src="src/assets/logo.png" alt="Logo" className="h-20 lg:h-28 md:h-24 sm:h-16" />
           </div>
 
           {/* Desktop Menu */}

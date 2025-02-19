@@ -1,19 +1,19 @@
 const HeroSection = () => {
   return (
     <div
-      className="relative w-full h-screen bg-cover bg-center flex items-center justify-left text-white"
+      className="relative w-full h-screen bg-cover bg-center flex items-center justify-center text-white"
       style={{ 
         backgroundImage: "url('src/assets/hero-image.jpg')",
         backgroundAttachment: 'fixed',
      }}
     >
       {/* Overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/10 z-10"></div>
+      <div className="absolute inset-0 bg-black/40"></div>
 
       
       {/* Content */}
-      <div className="relative z-10 text-center md:text-left px-4 md:pl-60">
-        <h1 className="text-5xl md:text-6xl font-bold">
+      <div className="relative text-center md:text-center px-4 ">
+        <h1 className="text-5xl md:text-7xl font-header">
           Modern living for
           <br />
           everyone

@@ -1,6 +1,10 @@
 @import "tailwindcss";
 
 body {
-    background-color: #222222;
-    color: #f7fafc;
-  }
+  background-color: #222222;
+  color: #f7fafc;
+}
+
+@theme {
+  --font-header: "Gilda Display", "serif";
+}
