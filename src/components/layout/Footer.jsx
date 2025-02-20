@@ -1,4 +1,5 @@
 import { MapPin, Phone, Facebook, Twitter, Instagram, Mail } from 'lucide-react';
+import logo from "../../assets/logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,7 +12,7 @@ const Footer = () => {
               {/* Logo Section */}
               <div className="flex flex-col items-center space-y-4 lg:items-start">
                 <img
-                  src="src/assets/logo.png"
+                  src={logo}
                   alt="Zeniux Stays Logo"
                   className="h-12 w-auto sm:h-16 lg:h-20 object-contain transition-transform hover:scale-105"
                 />

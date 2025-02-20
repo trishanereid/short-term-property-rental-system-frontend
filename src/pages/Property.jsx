@@ -1,21 +1,16 @@
-import { useState } from "react";
-import {
-  ArrowLeft,
-  ArrowRight,
-  Building,
-  MapPin,
-  Square,
-  Heart,
-  Share,
-  Star,
-} from "lucide-react";
+import { useState } from 'react';
+import { ArrowLeft, ArrowRight, Building, MapPin, Square } from 'lucide-react';
+import Footer from '../components/layout/Footer';
+import propertyImage1 from "../assets/property-img/2.jpg";
+import propertyImage2 from "../assets/property-img/4.jpg";
+import propertyImage3 from "../assets/property-img/5.jpg";
 
 const images = [
-  "src/assets/property-img/2.jpg",
-  "src/assets/property-img/4.jpg",
-  "src/assets/property-img/5.jpg",
-  "src/assets/property-img/4.jpg",
-  "src/assets/property-img/5.jpg",
+  propertyImage1,
+  propertyImage2,
+  propertyImage3,
+  propertyImage2,
+  propertyImage3
 ];
 
 const Property = () => {
@@ -39,30 +34,28 @@ const Property = () => {
       <div className="fixed inset-0 z-50 bg-black">
         <div className="flex h-full flex-col">
           <div className="flex items-center justify-between p-4 text-white">
-            <button
+            <button 
               onClick={() => setShowAllPhotos(false)}
               className="flex items-center gap-2 rounded-full bg-black/50 p-2"
             >
               <ArrowLeft className="h-5 w-5" />
               Back
             </button>
-            <span>
-              {currentImage + 1}/{images.length}
-            </span>
+            <span>{currentImage + 1}/{images.length}</span>
           </div>
           <div className="relative flex flex-1 items-center">
-            <button
+            <button 
               onClick={previousImage}
               className="absolute left-4 rounded-full bg-black/50 p-2 text-white"
             >
               <ArrowLeft className="h-6 w-6" />
             </button>
-            <img
-              src={images[currentImage]}
+            <img 
+              src={images[currentImage]} 
               alt={`Property view ${currentImage + 1}`}
               className="h-full w-full object-contain"
             />
-            <button
+            <button 
               onClick={nextImage}
               className="absolute right-4 rounded-full bg-black/50 p-2 text-white"
             >
@@ -78,10 +71,7 @@ const Property = () => {
     <div className="min-h-screen">
       <div className="top-0 z-40 px-4 py-4">
         <div className="mx-auto flex max-w-6xl items-center justify-between">
-          <button
-            onClick={handleClose}
-            className="flex items-center text-white hover:text-amber-400"
-          >
+          <button onClick={handleClose} className="flex items-center text-white hover:text-amber-400">
             <ArrowLeft className="mr-2 h-5 w-5" />
             <span className="hidden sm:inline">Back</span>
           </button>
@@ -154,51 +144,40 @@ const Property = () => {
                   <MapPin className="h-6 w-6" />
                   <div>
                     <p className="font-medium">Great location</p>
-                    <p className="text-sm text-gray-500">
-                      95% of recent guests rated the location 5 stars
-                    </p>
+                    <p className="text-sm text-gray-500">95% of recent guests rated the location 5 stars</p>
                   </div>
                 </div>
               </div>
 
               {/* Description */}
-              <div className="space-y-4">
+              <div className="space-y-4 font-primary">
                 <p>
-                  Real estate offers an exclusive FOR SALE elegant large 5-room
-                  apartment on Vincent Hložník Street in the Condominium
-                  Renaissance residential complex.
+                  Real estate offers an exclusive FOR SALE elegant large 5-room apartment on Vincent Hložník Street in the
+                  Condominium Renaissance residential complex.
                 </p>
                 <p>
-                  Thanks to its unique location, the property has access to a
-                  large Japanese garden with an area of 35 m², which can be
-                  accessed directly from the bedroom. The front of the apartment
-                  is at the height of the third floor, so the terrace is located
-                  just above the treetops.
+                  Thanks to its unique location, the property has access to a large Japanese garden with an area of 35 m²,
+                  which can be accessed directly from the bedroom. The front of the apartment is at the height of the third
+                  floor, so the terrace is located just above the treetops.
                 </p>
               </div>
 
               {/* Amenities */}
               <div>
-                <h2 className="mb-4 text-xl font-semibold">
-                  What this place offers
-                </h2>
+                <h2 className="mb-4 text-xl font-semibold">What this place offers</h2>
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div className="flex items-start gap-4 rounded-lg border p-4">
                     <Square className="h-6 w-6 shrink-0" />
                     <div>
                       <p className="font-medium">223.92 m² living space</p>
-                      <p className="text-sm text-gray-500">
-                        Spacious and comfortable
-                      </p>
+                      <p className="text-sm text-gray-500">Spacious and comfortable</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4 rounded-lg border p-4">
                     <Building className="h-6 w-6 shrink-0" />
                     <div>
                       <p className="font-medium">Premium finishes</p>
-                      <p className="text-sm text-gray-500">
-                        High-end materials throughout
-                      </p>
+                      <p className="text-sm text-gray-500">High-end materials throughout</p>
                     </div>
                   </div>
                 </div>
@@ -208,15 +187,15 @@ const Property = () => {
 
           {/* Booking Card */}
           <div className="lg:col-span-4">
-            <div className="sticky top-24 rounded-xl  bg-[#1B1B1B] p-6 shadow-lg">
+            <div className="sticky top-24 rounded-xl bg-[#1B1B1B] p-6 shadow-lg grid gap-1">
               <div className="mb-6">
                 <div className="mb-2 flex items-baseline justify-between">
-                  <span className="text-2xl font-bold">$807.00</span>
-                  <span className="text-gray-500">night</span>
+                  <span className="text-3xl font-bold">$807.00</span>
+                  <span className="text-gray-500">per day</span>
                 </div>
               </div>
 
-              <div className="space-y-4">
+              <div className="space-y-4 grid gap-4">
                 <div className="grid grid-cols-2 gap-2">
                   <div>
                     <label className="mb-1 block text-sm">Check-in</label>
@@ -246,6 +225,7 @@ const Property = () => {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 };

@@ -24,7 +24,6 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Navbar */}
       <nav
         className={`fixed w-full px-4 pt-4 lg:pt-5 md:pt-5 sm:pt-3 z-50 transition-transform duration-300 ${
           showNavbar ? "translate-y-0" : "-translate-y-full"
@@ -32,7 +31,6 @@ const Navbar = () => {
       >
         <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
-            {/* Logo */}
             <div>
               <img
                 src={logo}
@@ -55,15 +53,14 @@ const Navbar = () => {
               >
                 Property
               </button>
-              <a href="#" className="hover:text-gray-300">
-                About
-              </a>
-              <a href="#" className="hover:text-gray-300">
+              <button
+                onClick={() => navigate("/contact")}
+                className="hover:text-gray-300"
+              >
                 Contact Us
-              </a>
+              </button>
             </div>
 
-            {/* Login Button */}
             <div className="hidden md:flex space-x-4">
               <button
                 className="border border-white px-4 py-2 rounded-lg"
@@ -104,7 +101,6 @@ const Navbar = () => {
         }`}
       >
         <div className="sm:w-2/3 md:w-1/2 h-full bg-black p-6 flex flex-col space-y-6 text-white">
-          {/* Close Button */}
           <button onClick={() => setIsOpen(false)} className="self-end">
             <svg
               className="w-6 h-6"
@@ -122,7 +118,6 @@ const Navbar = () => {
             </svg>
           </button>
 
-          {/* Menu Items */}
           <button onClick={() => navigate("/")} className="hover:text-gray-300">
             Home
           </button>
@@ -132,14 +127,13 @@ const Navbar = () => {
           >
             Property
           </button>
-          <a href="#" className="hover:text-gray-300">
-            About
-          </a>
-          <a href="#" className="hover:text-gray-300">
+          <button
+            onClick={() => navigate("/contact")}
+            className="hover:text-gray-300"
+          >
             Contact Us
-          </a>
+          </button>
 
-          {/* Buttons */}
           <button
             className="border border-white px-4 py-2 rounded-lg"
             onClick={() => navigate("/login")}
