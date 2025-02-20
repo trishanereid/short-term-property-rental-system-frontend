@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import logo from "../../assets/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,7 +35,7 @@ const Navbar = () => {
             {/* Logo */}
             <div>
               <img
-                src="src/assets/logo.png"
+                src={logo}
                 alt="Logo"
                 className="h-20 lg:h-28 md:h-24 sm:h-16"
               />
