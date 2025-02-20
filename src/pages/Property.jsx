@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ArrowLeft, ArrowRight, Building, MapPin, Square } from 'lucide-react';
 import Footer from '../components/layout/Footer';
+import Navbar from "../components/layout/Navbar";
 import propertyImage1 from "../assets/property-img/2.jpg";
 import propertyImage2 from "../assets/property-img/4.jpg";
 import propertyImage3 from "../assets/property-img/5.jpg";
@@ -69,25 +70,8 @@ const Property = () => {
 
   return (
     <div className="min-h-screen">
-      <div className="top-0 z-40 px-4 py-4">
-        <div className="mx-auto flex max-w-6xl items-center justify-between">
-          <button onClick={handleClose} className="flex items-center text-white hover:text-amber-400">
-            <ArrowLeft className="mr-2 h-5 w-5" />
-            <span className="hidden sm:inline">Back</span>
-          </button>
-          {/* <div className="flex items-center gap-4">
-            <button className="flex items-center gap-2 rounded-full px-4 py-2 hover:bg-amber-400">
-              <Share className="h-5 w-5" />
-              <span className="hidden sm:inline">Share</span>
-            </button>
-            <button className="flex items-center gap-2 rounded-full px-4 py-2 hover:bg-amber-400">
-              <Heart className="h-5 w-5" />
-              <span className="hidden sm:inline">Save</span>
-            </button>
-          </div> */}
-        </div>
-      </div>
-
+      <Navbar isFixed={false} />
+      <div className="h-24 lg:h-32 md:h-28 sm:h-20" />
       <main className="mx-auto max-w-6xl px-4 py-6">
         {/* Image Gallery */}
         <div className="relative mb-8">

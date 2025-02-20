@@ -25,7 +25,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-zinc-900 to-zinc-800">
+    <div className="min-h-screen">
       {/* Hero Section */}
       <div
         className="relative h-[40vh] min-h-[300px] w-full overflow-hidden bg-cover bg-center bg-no-repeat"
@@ -111,7 +111,7 @@ const Contact = () => {
           </div>
 
           {/* Right Column - Contact Form */}
-          <div className="rounded-2xl bg-white/5 p-8 backdrop-blur-sm lg:p-10">
+          <div className="rounded-2xl bg-zinc-800 p-8 backdrop-blur-sm lg:p-10">
             <h2 className="mb-8 text-3xl font-light text-white font-primary">
               Get in Touch
             </h2>
