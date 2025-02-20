@@ -17,7 +17,7 @@ const HeroSection = () => {
     <div
       className="relative w-full h-screen bg-cover bg-center flex items-center justify-center text-white"
       style={{ 
-        backgroundImage: {hero},
+        backgroundImage: `url(${hero})`,
         backgroundAttachment: 'fixed',
       }}
     >
