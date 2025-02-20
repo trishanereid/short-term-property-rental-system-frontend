@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import hero from "../../assets/hero-image.jpg";
 
 export default function VillaFeatures() {
   useEffect(() => {
@@ -16,7 +17,7 @@ export default function VillaFeatures() {
       <div className="lg:hidden flex flex-col">
         <div className="relative h-[300px]">
           <img
-            src="src/assets/hero-image.jpg"
+            src={hero}
             alt="Luxury villa with pool and chess board at night"
             className="h-full w-full object-cover"
           />
@@ -55,7 +56,7 @@ export default function VillaFeatures() {
       <div className="lg:hidden flex flex-col">
         <div className="relative h-[300px]">
           <img
-            src="src/assets/hero-image.jpg"
+            src={hero}
             alt="Luxury villa with pool and chess board at night"
             className="h-full w-full object-cover"
           />
@@ -94,7 +95,7 @@ export default function VillaFeatures() {
       <div className="hidden lg:grid lg:grid-cols-2">
         <div className="relative h-[600px]">
           <img
-            src="src/assets/hero-image.jpg"
+            src={hero}
             alt="Luxury villa with pool and chess board at night"
             className="h-full w-full object-cover"
           />
@@ -159,7 +160,7 @@ export default function VillaFeatures() {
         </div>
         <div className="relative h-[600px]">
           <img
-            src="src/assets/hero-image.jpg"
+            src={hero}
             alt="Luxury villa with pool and chess board at night"
             className="h-full w-full object-cover"
           />

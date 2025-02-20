@@ -1,6 +1,8 @@
 import { useEffect } from "react";
-import { MapPin, Phone, Printer, Facebook, Twitter, Instagram, Mail } from 'lucide-react';
+import { MapPin, Phone, Facebook, Twitter, Instagram, Mail } from 'lucide-react';
 import AOS from "aos";
+import cta from "../../assets/cta-image.jpg";
+import logo from "../../assets/logo.png";
 
 const FullScreenSection = () => {
   useEffect(() => {
@@ -22,7 +24,7 @@ const FullScreenSection = () => {
           {/* Background Image */}
           <div className="absolute inset-0">
             <img
-              src="src/assets/cta-image.jpg"
+              src={cta}
               alt="Night view of Starlite Hotel"
               className="h-full w-full object-cover"
             />
@@ -65,7 +67,7 @@ const FullScreenSection = () => {
               {/* Logo Section */}
               <div className="flex flex-col items-center space-y-4 lg:items-start">
                 <img
-                  src="src/assets/logo.png"
+                  src={logo}
                   alt="Zeniux Stays Logo"
                   className="h-12 w-auto sm:h-16 lg:h-20 object-contain transition-transform hover:scale-105"
                 />
