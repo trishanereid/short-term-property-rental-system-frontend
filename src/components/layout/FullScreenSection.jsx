@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { MapPin, Phone, Printer, Facebook, Twitter, Instagram, Mail } from 'lucide-react';
+import { MapPin, Phone, Facebook, Twitter, Instagram, Mail } from 'lucide-react';
 import AOS from "aos";
 
 const FullScreenSection = () => {

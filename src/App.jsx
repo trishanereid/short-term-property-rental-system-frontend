@@ -11,7 +11,7 @@ function AppContent() {
 
   return (
     <>
-      {location.pathname !== "/login" && <Navbar />}
+      {location.pathname !== "/login" && location.pathname !== "/property" && <Navbar />}
       
       <Routes>
         <Route path="/" element={<Home />} />
