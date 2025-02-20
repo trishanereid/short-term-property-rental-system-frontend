@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import UserProfilePage from "./pages/Profile";
 import Login from "./pages/Login";
 import Property from "./pages/Property";
+import Contact from "./pages/Contact";
 
 function AppContent() {
   const location = useLocation();
@@ -18,8 +19,7 @@ function AppContent() {
         <Route path="/profile" element={<UserProfilePage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/property" element={<Property />} />
-        {/* <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} /> */}
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </>
   );

@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Eye, EyeOff, X } from "lucide-react";
+import logo from "../assets/logo.png";
+import hero from "../assets/hero-image.jpg";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -43,7 +45,7 @@ const Login = () => {
       <div
         className="hidden md:block md:w-1/2 bg-cover bg-center mt-4 mb-4 mx-3 rounded-lg"
         style={{
-          backgroundImage: "url('src/assets/hero-image.jpg')",
+          backgroundImage: `url(${hero})`,
           backgroundAttachment: "fixed",
         }}
       ></div>
@@ -60,7 +62,7 @@ const Login = () => {
           <div className="text-center">
             <div className="flex justify-center mb-4">
               <img
-                src="src/assets/logo.png"
+                src={logo}
                 alt="Logo"
                 className="h-28 lg:h-36 md:h-24 sm:h-16"
               />
