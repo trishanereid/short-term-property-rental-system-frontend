@@ -2,15 +2,15 @@ import { useState } from 'react';
 
 const HeroSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [guestCount, setGuestCount] = useState(0);
+  // const [guestCount, setGuestCount] = useState(0);
 
-  const incrementGuests = () => {
-    setGuestCount(prev => prev + 1);
-  };
+  // const incrementGuests = () => {
+  //   setGuestCount(prev => prev + 1);
+  // };
 
-  const decrementGuests = () => {
-    setGuestCount(prev => Math.max(0, prev - 1));
-  };
+  // const decrementGuests = () => {
+  //   setGuestCount(prev => Math.max(0, prev - 1));
+  // };
 
   return (
     <div
@@ -101,7 +101,7 @@ const HeroSection = () => {
                   />
                 </div>
 
-                <div className="space-y-2">
+                {/* <div className="space-y-2">
                   <label className="text-sm text-gray-400">Guests</label>
                   <div className="flex items-center justify-between bg-[#2D2D2D] border border-[#888F9F] p-3 rounded-lg">
                     <span>{guestCount} Guests</span>
@@ -120,7 +120,7 @@ const HeroSection = () => {
                       </button>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
 
               {/* Check Now Button */}
