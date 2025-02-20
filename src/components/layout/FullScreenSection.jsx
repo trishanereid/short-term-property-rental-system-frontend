@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { MapPin, Phone, Printer, Facebook, Twitter, Instagram } from 'lucide-react';
+import { MapPin, Phone, Printer, Facebook, Twitter, Instagram, Mail } from 'lucide-react';
 import AOS from "aos";
 
 const FullScreenSection = () => {
@@ -35,14 +35,14 @@ const FullScreenSection = () => {
             <div className="mx-auto max-w-3xl text-center">
               <h2
                 data-aos="fade-up"
-                className="mb-3 text-2xl font-bold tracking-tight text-white sm:mb-4 sm:text-3xl md:text-4xl lg:text-5xl"
+                className="mb-3 text-3xl font-header tracking-tight text-white sm:mb-4 sm:text-3xl md:text-4xl lg:text-6xl"
               >
                 Ready to find your eco-friendly home?
               </h2>
               <p
                 data-aos="fade-up"
                 data-aos-delay="100"
-                className="mb-4 text-base text-white/90 sm:mb-6 sm:text-lg md:text-xl"
+                className="mb-4 text-sm text-white/90 sm:mb-6 sm:text-lg md:text-xl"
               >
                 We have homes in 20+ cities across the country to choose from!
               </p>
@@ -88,8 +88,8 @@ const FullScreenSection = () => {
                     <span className="text-xs sm:text-sm">(123) 456-7890</span>
                   </div>
                   <div className="flex items-center gap-2 text-zinc-300">
-                    <Printer className="h-4 w-4 text-amber-500" />
-                    <span className="text-xs sm:text-sm">(123) 456-7890</span>
+                    <Mail className="h-4 w-4 text-amber-500" />
+                    <span className="text-xs sm:text-sm">hello@zenluxstays.com</span>
                   </div>
                 </div>
 
@@ -122,7 +122,7 @@ const FullScreenSection = () => {
             {/* Bottom Footer */}
             <div className="flex flex-col items-center gap-4 sm:gap-6 lg:flex-row lg:justify-between">
               <nav className="flex flex-wrap justify-center gap-3 sm:gap-4">
-                {['ABOUT US', 'CONTACT US', 'HELP', 'REFUND POLICY', 'DISCLAIMER'].map((item) => (
+                {['ABOUT US', 'CONTACT US', 'REFUND POLICY'].map((item) => (
                   <a
                     key={item}
                     href="#"

@@ -1,4 +1,3 @@
-import About from "../components/layout/About";
 import FullScreenSection from "../components/layout/FullScreenSection";
 import HeroSection from "../components/layout/HeroSection";
 import PropertyFeatures from "../components/layout/PropertyFeatures";
@@ -12,9 +11,8 @@ const Home = () => {
       <HeroSection />
       <PropertyShowcase />
       <VillaFeatures />
-      <TopOffersSection />
       <PropertyFeatures />
-      {/* <About /> */}
+      <TopOffersSection />
       <FullScreenSection />
     </div>
   );

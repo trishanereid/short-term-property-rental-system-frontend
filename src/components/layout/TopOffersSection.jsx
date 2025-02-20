@@ -80,13 +80,13 @@ const TopOffersSection = () => {
               <ChevronLeft className="h-6 w-6" />
             </button>
 
-            <button
+            {/* <button
               onClick={nextSlide}
               className="absolute -right-12 h-12 w-12 flex items-center justify-center rounded-full border-2 border-white/20 bg-zinc-900/80 text-white backdrop-blur-sm transition-colors hover:bg-white hover:text-zinc-900"
               aria-label="Next slide"
             >
               <ChevronRight className="h-6 w-6" />
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
