@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import hero from "../../assets/hero-image.jpg";
 
 const HeroSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -16,7 +17,7 @@ const HeroSection = () => {
     <div
       className="relative w-full h-screen bg-cover bg-center flex items-center justify-center text-white"
       style={{ 
-        backgroundImage: "url('src/assets/hero-image.jpg')",
+        backgroundImage: {hero},
         backgroundAttachment: 'fixed',
       }}
     >

@@ -1,6 +1,9 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import playIcon from "../../assets/play-icon.png";
+import property from "../../assets/property.png";
+import homeIcon from "../../assets/home-icon.png";
 
 const PropertyShowcase = () => {
   useEffect(() => {
@@ -21,7 +24,7 @@ const PropertyShowcase = () => {
               className="relative overflow-hidden rounded-3xl"
             >
               <img
-                src="src/assets/property.png"
+                src={property}
                 alt="Modern two-story house with garage"
                 className="w-full h-full object-cover"
               />
@@ -35,7 +38,7 @@ const PropertyShowcase = () => {
             >
               <div className="flex items-center gap-3">
                 <img
-                  src="src/assets/play-icon.png"
+                  src={playIcon}
                   alt="play icon"
                   className="w-8 h-8"
                 />
@@ -58,7 +61,7 @@ const PropertyShowcase = () => {
             >
               <div className="flex items-center gap-3">
                 <img
-                  src="src/assets/home-icon.png"
+                  src={homeIcon}
                   alt="home icon"
                   className="w-8 h-8"
                 />
@@ -119,7 +122,7 @@ const PropertyShowcase = () => {
               className="relative h-[500px] overflow-hidden rounded-2xl"
             >
               <img
-                src="src/assets/property.png"
+                src={property}
                 alt="Modern two-story house with garage"
                 className="h-full w-full object-cover"
               />
@@ -132,7 +135,7 @@ const PropertyShowcase = () => {
             >
               <div className="flex items-center gap-3">
                 <img
-                  src="src/assets/play-icon.png"
+                  src={playIcon}
                   alt="play icon"
                   className="flex items-center justify-center"
                 />
@@ -154,7 +157,7 @@ const PropertyShowcase = () => {
             >
               <div className="flex items-center gap-3">
                 <img
-                  src="src/assets/home-icon.png"
+                  src={homeIcon}
                   alt="play icon"
                   className="flex items-center justify-center"
                 />
