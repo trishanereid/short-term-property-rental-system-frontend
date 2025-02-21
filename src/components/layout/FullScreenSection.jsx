@@ -49,17 +49,19 @@ const FullScreenSection = () => {
                 data-aos="fade-up"
                 className="mb-3 text-3xl font-header tracking-tight text-white sm:mb-4 sm:text-3xl md:text-4xl lg:text-6xl"
               >
-                Ready to find your eco-friendly home?
+                Your Luxury Escape Awaits
               </h2>
               <p
                 data-aos="fade-up"
                 data-aos-delay="100"
                 className="mb-4 text-sm text-white/90 sm:mb-6 sm:text-lg md:text-xl"
               >
-                We have homes in 20+ cities across the country to choose from!
+                Experience the best of Miami in our exclusive vacation rental.
+                With premier locations and unmatched comfort, your perfect stay
+                begins here.
               </p>
               <button
-                onClick={() => navigate('/property')}
+                onClick={() => navigate("/property")}
                 data-aos="fade-up"
                 data-aos-delay="200"
                 className="rounded-lg bg-amber-600 px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:bg-amber-700 hover:shadow-lg sm:px-8 sm:py-4 sm:text-base lg:px-6 lg:py-4"
