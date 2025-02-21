@@ -3,15 +3,6 @@ import hero from "../../assets/hero-image.jpg";
 
 const HeroSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  // const [guestCount, setGuestCount] = useState(0);
-
-  // const incrementGuests = () => {
-  //   setGuestCount(prev => prev + 1);
-  // };
-
-  // const decrementGuests = () => {
-  //   setGuestCount(prev => Math.max(0, prev - 1));
-  // };
 
   return (
     <div
@@ -22,7 +13,7 @@ const HeroSection = () => {
       }}
     >
       {/* Overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/40"></div>
+      <div className="absolute inset-0 bg-black/50"></div>
       
       {/* Content */}
       <div className="relative text-center md:text-center px-4">
@@ -54,8 +45,8 @@ const HeroSection = () => {
             />
           </div>
 
-          <button className="bg-[#B7801C] text-white px-6 py-3 rounded-lg">
-            Book Now
+          <button className="bg-amber-600 hover:bg-amber-500 text-white px-6 py-3 rounded-lg">
+            BOOK NOW
           </button>
         </div>
 
@@ -101,36 +92,15 @@ const HeroSection = () => {
                     className="w-full bg-[#2D2D2D] border border-[#888F9F] p-3 rounded-lg text-white outline-none appearance-none [&::-webkit-calendar-picker-indicator]:invert"
                   />
                 </div>
-
-                {/* <div className="space-y-2">
-                  <label className="text-sm text-gray-400">Guests</label>
-                  <div className="flex items-center justify-between bg-[#2D2D2D] border border-[#888F9F] p-3 rounded-lg">
-                    <span>{guestCount} Guests</span>
-                    <div className="flex items-center space-x-4">
-                      <button 
-                        onClick={decrementGuests}
-                        className="text-xl"
-                      >
-                        -
-                      </button>
-                      <button 
-                        onClick={incrementGuests}
-                        className="text-xl"
-                      >
-                        +
-                      </button>
-                    </div>
-                  </div>
-                </div> */}
               </div>
 
               {/* Check Now Button */}
               <div className="mt-auto p-4">
                 <button 
                   onClick={() => setIsModalOpen(false)}
-                  className="w-full bg-[#B7801C] text-white py-3 rounded-lg font-medium"
+                  className="w-full bg-amber-600 hover:bg-amber-500 text-white py-3 rounded-lg font-medium"
                 >
-                  CHECK NOW
+                  BOOK NOW
                 </button>
               </div>
             </div>
