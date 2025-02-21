@@ -23,22 +23,17 @@ export default function VillaFeatures() {
             className="h-full w-full object-cover"
           />
         </div>
-        
+
         <div className="bg-[#1B1B1B] px-6 py-10">
-          <div 
-            className="relative"
-            data-aos="fade-up"
-          >
+          <div className="relative" data-aos="fade-up">
             <h2 className="mb-6 font-serif text-3xl font-light text-white">
-              Affordable luxury. Better than a 5-star hotel
+              Unmatched Luxury, Beyond a 5-Star Stay
             </h2>
-            <p className="mb-4 text-zinc-400 text-sm">
-              When traveling as a group, hotels are not only inconvenient but are also expensive.
-            </p>
             <p className="text-zinc-400 text-sm">
-              Renting a luxury villa instead of multiple hotel rooms allows you to stay together in a spacious
-              multi-bedroom home, with unique luxurious amenities that aren't found even in the best of the hotels - all
-              while paying less.
+              Step into an elegant retreat where opulence meets comfort. From
+              designer interiors to a private poolside oasis, our Miami vacation
+              home offers an elevated experience that exceeds even the most
+              prestigious hotels.
             </p>
           </div>
         </div>
@@ -53,22 +48,17 @@ export default function VillaFeatures() {
             className="h-full w-full object-cover"
           />
         </div>
-        
+
         <div className="bg-[#1C1C1C] px-6 py-10">
-          <div 
-            className="relative"
-            data-aos="fade-up"
-          >
+          <div className="relative" data-aos="fade-up">
             <h2 className="mb-6 font-serif text-3xl font-light text-white">
-              Affordable luxury. Better than a 5-star hotel
+              A Sanctuary of Sophistication & Comfort
             </h2>
-            <p className="mb-4 text-zinc-400 text-sm">
-              When traveling as a group, hotels are not only inconvenient but are also expensive.
-            </p>
             <p className="text-zinc-400 text-sm">
-              Renting a luxury villa instead of multiple hotel rooms allows you to stay together in a spacious
-              multi-bedroom home, with unique luxurious amenities that aren't found even in the best of the hotels - all
-              while paying less.
+              Escape to a world of refined elegance where every detail is
+              designed for indulgence. From breathtaking waterfront views to
+              meticulously curated interiors, our Miami vacation home delivers a
+              lavish retreat that redefines luxury living.
             </p>
           </div>
         </div>
@@ -84,20 +74,15 @@ export default function VillaFeatures() {
           />
         </div>
         <div className="flex items-center bg-[#1B1B1B]">
-          <div 
-            className="relative max-w-xl px-16 py-12"
-            data-aos="fade-left"
-          >
+          <div className="relative max-w-xl px-16 py-12" data-aos="fade-left">
             <h2 className="mb-6 font-serif text-3xl font-light text-white sm:text-4xl lg:text-5xl">
-              Affordable luxury. Better than a 5-star hotel
+              Unmatched Luxury, Beyond a 5-Star Stay
             </h2>
-            <p className="mb-4 text-zinc-400">
-              When traveling as a group, hotels are not only inconvenient but are also expensive.
-            </p>
             <p className="text-zinc-400">
-              Renting a luxury villa instead of multiple hotel rooms allows you to stay together in a spacious
-              multi-bedroom home, with unique luxurious amenities that aren't found even in the best of the hotels - all
-              while paying less.
+              Step into an elegant retreat where opulence meets comfort. From
+              designer interiors to a private poolside oasis, our Miami vacation
+              home offers an elevated experience that exceeds even the most
+              prestigious hotels.
             </p>
           </div>
         </div>
@@ -106,20 +91,18 @@ export default function VillaFeatures() {
       {/* Desktop version - Second card (Flipped) */}
       <div className="hidden lg:grid lg:grid-cols-2">
         <div className="flex items-center bg-[#1B1B1B]">
-          <div 
+          <div
             className="relative max-w-xl px-16 py-12 ml-auto"
             data-aos="fade-right"
           >
             <h2 className="mb-6 font-serif text-3xl font-light text-white sm:text-4xl lg:text-5xl">
-              Affordable luxury. Better than a 5-star hotel
+              A Sanctuary of Sophistication & Comfort
             </h2>
-            <p className="mb-4 text-zinc-400">
-              When traveling as a group, hotels are not only inconvenient but are also expensive.
-            </p>
             <p className="text-zinc-400">
-              Renting a luxury villa instead of multiple hotel rooms allows you to stay together in a spacious
-              multi-bedroom home, with unique luxurious amenities that aren't found even in the best of the hotels - all
-              while paying less.
+              Escape to a world of refined elegance where every detail is
+              designed for indulgence. From breathtaking waterfront views to
+              meticulously curated interiors, our Miami vacation home delivers a
+              lavish retreat that redefines luxury living.
             </p>
           </div>
         </div>

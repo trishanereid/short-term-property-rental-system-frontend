@@ -1,7 +1,8 @@
 import { useState } from "react";
 
-import img1 from "../../assets/property-img/2.jpg";
-import hero from "../../assets/hero-image.jpg";
+import propertyImage1 from "../../assets/property-img/2.jpg";
+import propertyImage2 from "../../assets/property-img/4.jpg";
+import propertyImage3 from "../../assets/property-img/5.jpg";
 
 
 const cn = (...classes) => classes.filter(Boolean).join(" ");
@@ -9,49 +10,49 @@ const cn = (...classes) => classes.filter(Boolean).join(" ");
 const galleryItems = [
   {
     id: 1,
-    src: img1,
+    src: propertyImage1,
     alt: "Luxury Villa Exterior",
     category: "Villas",
   },
   {
     id: 2,
-    src: hero,
+    src: propertyImage2,
     alt: "Modern Living Room",
     category: "Interiors",
   },
   {
     id: 3,
-    src: hero,
+    src: propertyImage3,
     alt: "Infinity Pool",
     category: "Amenities",
   },
   {
     id: 4,
-    src: hero,
+    src: propertyImage1,
     alt: "Beachfront Property",
     category: "Villas",
   },
   {
     id: 5,
-    src: hero,
+    src: propertyImage2,
     alt: "Luxury Bedroom",
     category: "Interiors",
   },
   {
     id: 6,
-    src: hero,
+    src: propertyImage3,
     alt: "Yacht Charter",
     category: "Gourmet Kitchen",
   },
   {
     id: 7,
-    src: hero,
+    src: propertyImage1,
     alt: "Yacht Charter",
     category: "Interiors",
   },
   {
     id: 8,
-    src: hero,
+    src: propertyImage2,
     alt: "Yacht Charter",
     category: "Gourmet Kitchen",
   },

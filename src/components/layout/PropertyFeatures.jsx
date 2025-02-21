@@ -2,17 +2,19 @@ import { Play, Home, FileText } from "lucide-react";
 
 const PropertyFeatures = () => {
   return (
-    <section className="bg-[#1B1B1B] px-4 py-16 md:px-6 lg:px-8 relative w-full bg-cover bg-center flex items-center justify-left text-white">
-      <div className="mx-auto max-w-7xl">
+    <section className="bg-[#1B1B1B] px-4 py-16 md:px-6 lg:px-8 relative w-full h-screen bg-cover bg-center flex items-center justify-left text-white">
+      <div className="mx-auto max-w-7xl lg:mt-30">
         <div className="mb-20 lg:mb-20 grid gap-8 lg:grid-cols-2">
           <h2 className="text-4xl font-header tracking-tight text-white sm:text-5xl">
-            We make it easy for <span className="text-amber-500">tenants</span>{" "}
-            and <span className="text-amber-500">landlords.</span>
+            We make it easy for{" "}
+            <span className="text-amber-500">Effortless Booking</span> and{" "}
+            <span className="text-amber-500">Exclusive Benefits.</span>
           </h2>
           <p className="text-lg leading-relaxed text-zinc-400">
-            Whether it's selling your current home, getting financing, or buying
-            a new home, we make it easy and efficient. The best part? you'll
-            save a bunch of money and time with our services.
+            Whether you're planning your next getaway or seeking the perfect
+            luxury retreat, we make the process seamless and hassle-free. The
+            best part? You’ll enjoy exclusive perks and premium comfort with
+            every stay.
           </p>
         </div>
 
@@ -23,11 +25,11 @@ const PropertyFeatures = () => {
               <Home className="h-6 w-6 text-amber-600" />
             </div>
             <h3 className="mb-4 text-2xl font-semibold text-zinc-900 transition-colors duration-300 group-hover:text-amber-600">
-              Find the best deal
+              Find the Best Deal
             </h3>
             <p className="text-zinc-600">
-              Browse thousands of properties, save your favorites and set up
-              search alerts so you don't miss the best home deal!
+              Browse our handpicked luxury properties, save your favorites, and
+              secure the best rates for an unforgettable stay.
             </p>
           </div>
 
@@ -37,11 +39,11 @@ const PropertyFeatures = () => {
               <Play className="h-6 w-6 text-amber-600" />
             </div>
             <h3 className="mb-4 text-2xl font-semibold text-white transition-colors duration-300 group-hover:text-amber-500">
-              Virtual home tour
+              Exclusive Offers
             </h3>
             <p className="text-zinc-400">
-              You can communicate directly with landlords and we provide you
-              with virtual tour before you buy or rent the property.
+              Unlock special discounts and limited-time deals on our premium
+              vacation rentals.
             </p>
           </div>
 
@@ -51,11 +53,11 @@ const PropertyFeatures = () => {
               <Home className="h-6 w-6 text-amber-600" />
             </div>
             <h3 className="mb-4 text-2xl font-semibold text-zinc-900 transition-colors duration-300 group-hover:text-amber-600">
-              Find the best deal
+              Premium Comfort
             </h3>
             <p className="text-zinc-600">
-              Browse thousands of properties, save your favorites and set up
-              search alerts so you don't miss the best home deal!
+              Enjoy elegantly designed interiors, high-end furnishings, and
+              world-class amenities tailored for ultimate relaxation.
             </p>
           </div>
 
@@ -64,11 +66,11 @@ const PropertyFeatures = () => {
               <Play className="h-6 w-6 text-amber-600" />
             </div>
             <h3 className="mb-4 text-2xl font-semibold text-white transition-colors duration-300 group-hover:text-amber-500">
-              Virtual home tour
+              Private Chef Experience
             </h3>
             <p className="text-zinc-400">
-              You can communicate directly with landlords and we provide you
-              with virtual tour before you buy or rent the property.
+              Savor gourmet dining with a private chef, bringing fine dining
+              directly to your vacation home.
             </p>
           </div>
 
@@ -78,11 +80,11 @@ const PropertyFeatures = () => {
               <Home className="h-6 w-6 text-amber-600" />
             </div>
             <h3 className="mb-4 text-2xl font-semibold text-zinc-900 transition-colors duration-300 group-hover:text-amber-600">
-              Find the best deal
+              Luxury Car Rental
             </h3>
             <p className="text-zinc-600">
-              Browse thousands of properties, save your favorites and set up
-              search alerts so you don't miss the best home deal!
+              Upgrade your stay with access to high-end vehicle rentals for
+              effortless exploration.
             </p>
           </div>
 
@@ -92,11 +94,11 @@ const PropertyFeatures = () => {
               <FileText className="h-6 w-6 text-amber-600" />
             </div>
             <h3 className="mb-4 text-2xl font-semibold text-white transition-colors duration-300 group-hover:text-amber-500">
-              View rental report
+              Concierge Service
             </h3>
             <p className="text-zinc-400">
-              You can communicate directly with tenants and we provide you with
-              rental reports to help manage your property.
+              From personalized recommendations to VIP reservations, our
+              dedicated concierge team ensures a flawless and memorable stay.
             </p>
           </div>
         </div>

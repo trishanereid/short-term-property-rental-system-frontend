@@ -43,10 +43,10 @@ const PropertyShowcase = () => {
                 <img src={playIcon} alt="play icon" className="w-8 h-8" />
                 <div>
                   <h3 className="font-semibold text-zinc-900 text-sm">
-                    Virtual home tour
+                    Exclusive Property Tour
                   </h3>
                   <p className="text-xs text-zinc-600">
-                    We provide you with virtual tour
+                    Explore your luxury retreat before booking.
                   </p>
                 </div>
               </div>
@@ -62,10 +62,10 @@ const PropertyShowcase = () => {
                 <img src={homeIcon} alt="home icon" className="w-8 h-8" />
                 <div>
                   <h3 className="font-semibold text-zinc-900 text-sm">
-                    Find the best deal
+                    Luxury Stay, Best Rates
                   </h3>
                   <p className="text-xs text-zinc-600">
-                    Browse thousands of properties
+                    Book luxury stay at unbeatable prices.
                   </p>
                 </div>
               </div>
@@ -75,22 +75,22 @@ const PropertyShowcase = () => {
           <div className="mt-8 w-full max-w-sm">
             <div className="mb-6 inline-flex rounded-xl bg-[#2D2D2D] p-1 border-1 border-[#888F9F] w-full">
               <button className="flex-1 rounded-lg bg-white px-6 py-3 text-sm font-medium text-amber-700">
-                For tenants
+                For Guests
               </button>
               <button className="flex-1 px-6 py-3 text-sm font-medium text-zinc-400">
-                For landlords
+                For Hosts
               </button>
             </div>
 
             <h2 className="mb-4 text-3xl font-bold tracking-tight text-white font-header">
-              We make it easy for{" "}
-              <span className="block">tenants and landlords.</span>
+              A Seamless Luxury Experience
             </h2>
 
             <p className="mb-6 text-base leading-relaxed text-zinc-400">
-              Whether it's selling your current home, getting financing, or
-              buying a new home, we make it easy and efficient. The best part?
-              you'll save a bunch of money and time with our services.
+              Indulge in a world of comfort and sophistication. Whether you're
+              planning a relaxing vacation or a vibrant city escape, our Miami
+              luxury rental offers a refined stay with premium amenities
+              tailored to your needs.
             </p>
 
             <button
@@ -139,10 +139,10 @@ const PropertyShowcase = () => {
                 />
                 <div>
                   <h3 className="font-semibold text-zinc-900">
-                    Virtual home tour
+                    Exclusive Property Tour
                   </h3>
                   <p className="text-sm text-zinc-600">
-                    We provide you with virtual tour
+                    Explore your luxury retreat before booking.
                   </p>
                 </div>
               </div>
@@ -161,10 +161,10 @@ const PropertyShowcase = () => {
                 />
                 <div>
                   <h3 className="font-semibold text-zinc-900">
-                    Find the best deal
+                    Luxury Stay, Best Rates
                   </h3>
                   <p className="text-sm text-zinc-600">
-                    Browse thousands of properties
+                    Book luxury stay at unbeatable prices.
                   </p>
                 </div>
               </div>
@@ -174,27 +174,28 @@ const PropertyShowcase = () => {
           <div className="flex flex-col justify-center lg:pl-8">
             <div className="mb-8 inline-flex rounded-lg bg-[#2D2D2D] p-2 border-1 border-[#888F9F] w-fit">
               <button className="rounded-md bg-white px-6 py-4 text-sm font-medium text-amber-700">
-                For tenants
+                For Guests
               </button>
               <button className="px-6 py-4 text-sm font-medium text-zinc-400">
-                For landlords
+                For Hosts
               </button>
             </div>
 
             <h2 className="mb-6 text-4xl font-bold tracking-tight text-white font-header sm:text-5xl">
-              We make it easy for{" "}
-              <span className="block">tenants and landlords.</span>
+              A Seamless Luxury Experience
             </h2>
 
             <p className="mb-8 text-lg leading-relaxed text-zinc-400">
-              Whether its selling your current home, getting financing, or
-              buying a new home, we make it easy and efficient. The best part?
-              youll save a bunch of money and time with our services.
+              Indulge in a world of comfort and sophistication. Whether you're
+              planning a relaxing vacation or a vibrant city escape, our Miami
+              luxury rental offers a refined stay with premium amenities
+              tailored to your needs.
             </p>
 
             <button
-            onClick={() => navigate("/property")}
-            className="inline-flex w-fit items-center gap-2 rounded-lg bg-amber-600 hover:bg-amber-500 px-6 py-3 text-white transition-colors ">
+              onClick={() => navigate("/property")}
+              className="inline-flex w-fit items-center gap-2 rounded-lg bg-amber-600 hover:bg-amber-500 px-6 py-3 text-white transition-colors "
+            >
               SEE MORE
             </button>
           </div>
