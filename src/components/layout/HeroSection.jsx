@@ -18,7 +18,7 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative text-center md:text-center lg:text-center px-4">
         <h1 className="text-5xl md:text-7xl font-header">
-          Modern Luxury Living in
+          Luxury Living in
           <br />
           Miami
         </h1>

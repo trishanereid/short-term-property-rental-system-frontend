@@ -2,7 +2,7 @@ import { Play, Home, FileText } from "lucide-react";
 
 const PropertyFeatures = () => {
   return (
-    <section className="bg-[#1B1B1B] px-4 py-16 md:px-6 lg:px-8 relative w-full h-screen bg-cover bg-center flex items-center justify-left text-white">
+    <section className="bg-[#1B1B1B] px-4 py-16 md:px-6 lg:px-8 relative w-full bg-cover bg-center flex items-center justify-left text-white">
       <div className="mx-auto max-w-7xl lg:mt-30">
         <div className="mb-20 lg:mb-20 grid gap-8 lg:grid-cols-2">
           <h2 className="text-4xl font-header tracking-tight text-white sm:text-5xl">
