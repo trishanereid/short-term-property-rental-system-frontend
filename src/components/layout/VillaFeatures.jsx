@@ -1,7 +1,8 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import hero from "../../assets/hero-image.jpg";
+import house from "../../assets/house.jpg";
+import poolArea from "../../assets/pool-area.jpg";
 
 export default function VillaFeatures() {
   useEffect(() => {
@@ -17,7 +18,7 @@ export default function VillaFeatures() {
       <div className="lg:hidden flex flex-col">
         <div className="relative h-[300px]">
           <img
-            src={hero}
+            src={house}
             alt="Luxury villa with pool and chess board at night"
             className="h-full w-full object-cover"
           />
@@ -28,15 +29,6 @@ export default function VillaFeatures() {
             className="relative"
             data-aos="fade-up"
           >
-            <div className="absolute -bottom-16 -left-16 opacity-10">
-              <img
-                src="/placeholder.svg"
-                alt="Decorative palm leaf"
-                width={200}
-                height={200}
-                className="opacity-20"
-              />
-            </div>
             <h2 className="mb-6 font-serif text-3xl font-light text-white">
               Affordable luxury. Better than a 5-star hotel
             </h2>
@@ -56,7 +48,7 @@ export default function VillaFeatures() {
       <div className="lg:hidden flex flex-col">
         <div className="relative h-[300px]">
           <img
-            src={hero}
+            src={poolArea}
             alt="Luxury villa with pool and chess board at night"
             className="h-full w-full object-cover"
           />
@@ -67,15 +59,6 @@ export default function VillaFeatures() {
             className="relative"
             data-aos="fade-up"
           >
-            <div className="absolute -bottom-16 -left-16 opacity-10">
-              <img
-                src="/placeholder.svg"
-                alt="Decorative palm leaf"
-                width={200}
-                height={200}
-                className="opacity-20"
-              />
-            </div>
             <h2 className="mb-6 font-serif text-3xl font-light text-white">
               Affordable luxury. Better than a 5-star hotel
             </h2>
@@ -95,7 +78,7 @@ export default function VillaFeatures() {
       <div className="hidden lg:grid lg:grid-cols-2">
         <div className="relative h-[600px]">
           <img
-            src={hero}
+            src={house}
             alt="Luxury villa with pool and chess board at night"
             className="h-full w-full object-cover"
           />
@@ -105,15 +88,6 @@ export default function VillaFeatures() {
             className="relative max-w-xl px-16 py-12"
             data-aos="fade-left"
           >
-            <div className="absolute -bottom-16 -left-16 opacity-10">
-              <img
-                src="/placeholder.svg"
-                alt="Decorative palm leaf"
-                width={200}
-                height={200}
-                className="opacity-20"
-              />
-            </div>
             <h2 className="mb-6 font-serif text-3xl font-light text-white sm:text-4xl lg:text-5xl">
               Affordable luxury. Better than a 5-star hotel
             </h2>
@@ -136,15 +110,6 @@ export default function VillaFeatures() {
             className="relative max-w-xl px-16 py-12 ml-auto"
             data-aos="fade-right"
           >
-            <div className="absolute -bottom-16 -left-16 opacity-10">
-              <img
-                src="/placeholder.svg"
-                alt="Decorative palm leaf"
-                width={200}
-                height={200}
-                className="opacity-20"
-              />
-            </div>
             <h2 className="mb-6 font-serif text-3xl font-light text-white sm:text-4xl lg:text-5xl">
               Affordable luxury. Better than a 5-star hotel
             </h2>
@@ -160,7 +125,7 @@ export default function VillaFeatures() {
         </div>
         <div className="relative h-[600px]">
           <img
-            src={hero}
+            src={poolArea}
             alt="Luxury villa with pool and chess board at night"
             className="h-full w-full object-cover"
           />

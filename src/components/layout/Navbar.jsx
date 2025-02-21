@@ -2,33 +2,38 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../../assets/logo.png";
 
-const Navbar = () => {
+const Navbar = ({ isFixed = false }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
   let lastScrollY = window.scrollY;
   const navigate = useNavigate();
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > lastScrollY) {
-        setShowNavbar(false);
-      } else {
-        setShowNavbar(true);
-      }
-      lastScrollY = window.scrollY;
-    };
+    // Only add scroll listener if navbar is not fixed
+    if (!isFixed) {
+      const handleScroll = () => {
+        if (window.scrollY > lastScrollY) {
+          setShowNavbar(false);
+        } else {
+          setShowNavbar(true);
+        }
+        lastScrollY = window.scrollY;
+      };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    }
+  }, [isFixed]);
 
   return (
     <>
       <nav
-        className={`fixed w-full px-4 pt-4 lg:pt-5 md:pt-5 sm:pt-3 z-50 transition-transform duration-300 ${
-          showNavbar ? "translate-y-0" : "-translate-y-full"
-        } bg-gradient-to-b from-black/50 to-transparent text-white`}
+        className={`fixed w-full px-4 pt-4 lg:pt-5 md:pt-5 sm:pt-3 z-50 
+          ${!isFixed ? "transition-transform duration-300" : ""} 
+          ${!isFixed && !showNavbar ? "-translate-y-full" : "translate-y-0"}
+          bg-gradient-to-b from-black/50 to-transparent text-white`}
       >
+        {/* Rest of your navbar code remains exactly the same */}
         <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             <div>

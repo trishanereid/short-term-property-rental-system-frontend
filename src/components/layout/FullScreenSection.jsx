@@ -1,5 +1,14 @@
 import { useEffect } from "react";
-import { MapPin, Phone, Facebook, Twitter, Instagram, Mail } from 'lucide-react';
+import { useNavigate } from "react-router-dom";
+
+import {
+  MapPin,
+  Phone,
+  Facebook,
+  Twitter,
+  Instagram,
+  Mail,
+} from "lucide-react";
 import AOS from "aos";
 import cta from "../../assets/cta-image.jpg";
 import logo from "../../assets/logo.png";
@@ -9,10 +18,11 @@ const FullScreenSection = () => {
     AOS.init({
       duration: 1000,
       once: true,
-      easing: 'ease-out',
+      easing: "ease-out",
     });
   }, []);
 
+  const navigate = useNavigate();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -49,11 +59,12 @@ const FullScreenSection = () => {
                 We have homes in 20+ cities across the country to choose from!
               </p>
               <button
+                onClick={() => navigate('/property')}
                 data-aos="fade-up"
                 data-aos-delay="200"
                 className="rounded-lg bg-amber-600 px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:bg-amber-700 hover:shadow-lg sm:px-8 sm:py-4 sm:text-base lg:px-6 lg:py-4"
               >
-                Browse homes
+                BOOK NOW
               </button>
             </div>
           </div>
@@ -91,18 +102,22 @@ const FullScreenSection = () => {
                   </div>
                   <div className="flex items-center gap-2 text-zinc-300">
                     <Mail className="h-4 w-4 text-amber-500" />
-                    <span className="text-xs sm:text-sm">hello@zenluxstays.com</span>
+                    <span className="text-xs sm:text-sm">
+                      hello@zenluxstays.com
+                    </span>
                   </div>
                 </div>
 
                 {/* Social Media */}
                 <div className="flex flex-col items-center gap-3 lg:items-end">
-                  <span className="text-xs font-medium text-zinc-400">Connect With Us</span>
+                  <span className="text-xs font-medium text-zinc-400">
+                    Connect With Us
+                  </span>
                   <div className="flex gap-4">
                     {[
-                      { Icon: Facebook, label: 'Facebook' },
-                      { Icon: Twitter, label: 'Twitter' },
-                      { Icon: Instagram, label: 'Instagram' },
+                      { Icon: Facebook, label: "Facebook" },
+                      { Icon: Twitter, label: "Twitter" },
+                      { Icon: Instagram, label: "Instagram" },
                     ].map(({ Icon, label }) => (
                       <a
                         key={label}
@@ -124,7 +139,7 @@ const FullScreenSection = () => {
             {/* Bottom Footer */}
             <div className="flex flex-col items-center gap-4 sm:gap-6 lg:flex-row lg:justify-between">
               <nav className="flex flex-wrap justify-center gap-3 sm:gap-4">
-                {['ABOUT US', 'CONTACT US', 'REFUND POLICY'].map((item) => (
+                {["ABOUT US", "CONTACT US", "REFUND POLICY"].map((item) => (
                   <a
                     key={item}
                     href="#"

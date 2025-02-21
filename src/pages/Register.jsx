@@ -1,32 +1,43 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
 import { Eye, EyeOff, X } from "lucide-react";
+import PhoneInput from 'react-phone-number-input';
 import logo from "../assets/logo.png";
 import coverImage from "../assets/cta-image.jpg";
 
-const Login = () => {
+const Register = () => {
   const navigate = useNavigate();
 
   const [showPassword, setShowPassword] = useState(false);
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [rememberMe, setRememberMe] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    password: "",
+    phoneNumber: ""
+  });
   const [errors, setErrors] = useState({});
 
   const validateForm = () => {
     const newErrors = {};
 
-    if (!email) {
+    if (!formData.name.trim()) {
+      newErrors.name = "Name is required";
+    }
+
+    if (!formData.email) {
       newErrors.email = "Email is required";
-    } else if (!/\S+@\S+\.\S+/.test(email)) {
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = "Please enter a valid email";
     }
 
-    if (!password) {
+    if (!formData.password) {
       newErrors.password = "Password is required";
-    } else if (password.length < 8) {
+    } else if (formData.password.length < 8) {
       newErrors.password = "Password must be at least 8 characters";
+    }
+
+    if (!formData.phoneNumber) {
+      newErrors.phoneNumber = "Phone number is required";
     }
 
     setErrors(newErrors);
@@ -36,12 +47,20 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
-      console.log("Form submitted:", { email, password, rememberMe });
+      console.log("Form submitted:", formData);
     }
   };
 
   const handleClose = () => {
     window.location.href = "/";
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
   };
 
   return (
@@ -71,11 +90,32 @@ const Login = () => {
                 className="h-28 lg:h-36 md:h-24 sm:h-16"
               />
             </div>
-            <h2 className="text-3xl font-bold text-white">Sign in</h2>
-            <p className="mt-2 text-gray-400">Sign in to book your property</p>
+            <h2 className="text-3xl font-bold text-white">Sign up</h2>
+            <p className="mt-2 text-gray-400">Create your account to get started</p>
           </div>
 
           <form onSubmit={handleSubmit} className="mt-8 space-y-6">
+            <div>
+              <label className="block text-sm font-medium text-gray-300">
+                Full Name
+              </label>
+              <div className="mt-1">
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  className={`appearance-none block w-full px-3 py-2 border ${
+                    errors.name ? "border-red-500" : "border-[#888F9F]"
+                  } bg-[#2D2D2D] rounded-lg shadow-sm placeholder-gray-500 text-white focus:outline-none focus:ring-amber-500 focus:border-amber-500`}
+                  placeholder="John Doe"
+                />
+                {errors.name && (
+                  <p className="mt-1 text-sm text-red-500">{errors.name}</p>
+                )}
+              </div>
+            </div>
+
             <div>
               <label className="block text-sm font-medium text-gray-300">
                 Email address
@@ -83,8 +123,9 @@ const Login = () => {
               <div className="mt-1">
                 <input
                   type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   className={`appearance-none block w-full px-3 py-2 border ${
                     errors.email ? "border-red-500" : "border-[#888F9F]"
                   } bg-[#2D2D2D] rounded-lg shadow-sm placeholder-gray-500 text-white focus:outline-none focus:ring-amber-500 focus:border-amber-500`}
@@ -98,13 +139,42 @@ const Login = () => {
 
             <div>
               <label className="block text-sm font-medium text-gray-300">
+                Phone Number
+              </label>
+              <div className="mt-1">
+                <PhoneInput
+                  international
+                  countryCallingCodeEditable={false}
+                  defaultCountry="US"
+                  value={formData.phoneNumber}
+                  onChange={(value) => setFormData(prev => ({ ...prev, phoneNumber: value }))}
+                  className={`appearance-none block w-full ${
+                    errors.phoneNumber ? "border-red-500" : "border-[#888F9F]"
+                  }`}
+                  style={{
+                    '--PhoneInput-color--focus': '#F59E0B',
+                    '--PhoneInputInternationalIconPhone-opacity': '0.8',
+                    '--PhoneInputCountrySelect-marginRight': '0.5rem',
+                    '--PhoneInputCountrySelectArrow-color': '#9CA3AF',
+                    '--PhoneInputCountrySelectArrow-opacity': '0.6'
+                  }}
+                />
+                {errors.phoneNumber && (
+                  <p className="mt-1 text-sm text-red-500">{errors.phoneNumber}</p>
+                )}
+              </div>
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-300">
                 Password
               </label>
               <div className="mt-1 relative">
                 <input
                   type={showPassword ? "text" : "password"}
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
+                  name="password"
+                  value={formData.password}
+                  onChange={handleChange}
                   className={`appearance-none block w-full px-3 py-2 border ${
                     errors.password ? "border-red-500" : "border-[#888F9F]"
                   } bg-[#2D2D2D] rounded-lg shadow-sm placeholder-gray-500 text-white focus:outline-none focus:ring-amber-500 focus:border-amber-500`}
@@ -127,34 +197,22 @@ const Login = () => {
               </div>
             </div>
 
-            <div className="flex items-center">
-              <input
-                type="checkbox"
-                checked={rememberMe}
-                onChange={(e) => setRememberMe(e.target.checked)}
-                className="h-4 w-4 text-amber-500 focus:ring-amber-500 border-[#888F9F] rounded bg-[#2D2D2D]"
-              />
-              <label className="ml-2 block text-sm text-gray-300">
-                Remember me
-              </label>
-            </div>
-
             <div>
               <button
                 type="submit"
                 className="w-full py-2 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-amber-600 hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-amber-500 transition-colors duration-200"
               >
-                Sign in
+                Sign up
               </button>
             </div>
 
             <p className="text-center text-sm text-gray-400">
-              Don't have an account?{" "}
+              Already have an account?{" "}
               <button
-                onClick={() => navigate("/signup")}
+                onClick={() => navigate("/login")}
                 className="font-medium text-amber-500 hover:text-amber-400"
               >
-                SIGN UP
+                SIGN IN
               </button>
             </p>
           </form>
@@ -164,4 +222,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;

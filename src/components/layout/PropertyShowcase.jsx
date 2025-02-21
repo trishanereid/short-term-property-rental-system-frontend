@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import playIcon from "../../assets/play-icon.png";
@@ -12,6 +13,8 @@ const PropertyShowcase = () => {
       once: true,
     });
   }, []);
+
+  const navigate = useNavigate();
 
   return (
     <section className="relative w-full min-h-screen mt-10 bg-cover bg-center flex items-center justify-left text-white">
@@ -37,11 +40,7 @@ const PropertyShowcase = () => {
               className="absolute left-4 top-4 rounded-2xl bg-white/95 p-4 shadow-lg backdrop-blur-sm"
             >
               <div className="flex items-center gap-3">
-                <img
-                  src={playIcon}
-                  alt="play icon"
-                  className="w-8 h-8"
-                />
+                <img src={playIcon} alt="play icon" className="w-8 h-8" />
                 <div>
                   <h3 className="font-semibold text-zinc-900 text-sm">
                     Virtual home tour
@@ -60,11 +59,7 @@ const PropertyShowcase = () => {
               className="absolute right-4 bottom-16 rounded-2xl bg-white/95 p-4 shadow-lg backdrop-blur-sm"
             >
               <div className="flex items-center gap-3">
-                <img
-                  src={homeIcon}
-                  alt="home icon"
-                  className="w-8 h-8"
-                />
+                <img src={homeIcon} alt="home icon" className="w-8 h-8" />
                 <div>
                   <h3 className="font-semibold text-zinc-900 text-sm">
                     Find the best deal
@@ -98,23 +93,26 @@ const PropertyShowcase = () => {
               you'll save a bunch of money and time with our services.
             </p>
 
-            <button className="w-full rounded-xl bg-[#B7801C] px-6 py-3 font-medium text-white flex items-center justify-center gap-2 hover:bg-amber-700 transition-colors">
-              See more
-              <svg 
-                width="20" 
-                height="20" 
-                viewBox="0 0 24 24" 
-                fill="none" 
-                stroke="currentColor" 
+            <button
+              onClick={() => navigate("/property")}
+              className="w-full rounded-xl bg-amber-600 hover:bg-amber-500 px-6 py-3 text-white flex items-center justify-center gap-2 transition-colors"
+            >
+              SEE MORE
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
                 className="ml-1"
               >
-                <path d="M5 12h14M12 5l7 7-7 7"/>
+                <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
             </button>
           </div>
         </div>
 
-        {/* Desktop version - unchanged */}
+        {/* Desktop version */}
         <div className="hidden lg:grid gap-8 lg:grid-cols-2 lg:gap-12">
           <div className="relative">
             <div
@@ -194,8 +192,10 @@ const PropertyShowcase = () => {
               youll save a bunch of money and time with our services.
             </p>
 
-            <button className="inline-flex w-fit items-center gap-2 rounded-lg bg-[#B7801C] px-6 py-3 font-medium text-white transition-colors hover:bg-amber-700">
-              See more
+            <button
+            onClick={() => navigate("/property")}
+            className="inline-flex w-fit items-center gap-2 rounded-lg bg-amber-600 hover:bg-amber-500 px-6 py-3 text-white transition-colors ">
+              SEE MORE
             </button>
           </div>
         </div>
