@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../../assets/logo.png";
+import { Button } from "../ui/button";
 
 const Navbar = ({ isFixed = false }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -67,12 +68,9 @@ const Navbar = ({ isFixed = false }) => {
             </div>
 
             <div className="hidden md:flex space-x-4">
-              <button
-                className="border border-white px-4 py-2 rounded-lg"
-                onClick={() => navigate("/login")}
-              >
+              <Button variant="secondary" onClick={() => navigate("/login")}>
                 Login
-              </button>
+              </Button>
             </div>
 
             {/* Mobile Menu Button */}
@@ -144,9 +142,6 @@ const Navbar = ({ isFixed = false }) => {
             onClick={() => navigate("/login")}
           >
             Login
-          </button>
-          <button className="bg-yellow-500 px-4 py-2 rounded-lg text-black">
-            Book Now
           </button>
         </div>
       </div>

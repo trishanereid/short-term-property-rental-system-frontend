@@ -11,7 +11,7 @@ const Home = () => {
       <HeroSection />
       <PropertyShowcase />
       <VillaFeatures />
-      <PropertyFeatures />
+      {/* <PropertyFeatures /> */}
       <GallerySection />
       <FullScreenSection />
     </div>

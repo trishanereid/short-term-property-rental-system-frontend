@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import house from "../../assets/house.jpg";
+import house from "../../assets/house.png";
 import poolArea from "../../assets/pool-area.jpg";
 
 export default function VillaFeatures() {

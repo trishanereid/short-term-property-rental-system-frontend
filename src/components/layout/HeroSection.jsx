@@ -1,8 +1,20 @@
 import { useState } from "react";
+
 import hero from "../../assets/hero-image.jpg";
+import { format } from "date-fns";
+import { CalendarIcon } from "lucide-react";
+import { Calendar } from "@/components/ui/calendar";
+import { Button } from "@/components/ui/button";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 
 const HeroSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [arrivalDate, setArrivalDate] = useState(undefined);
+  const [departureDate, setDepartureDate] = useState(undefined);
 
   return (
     <div
@@ -24,31 +36,70 @@ const HeroSection = () => {
         </h1>
         <p className="mt-4 text-xs md:text-xl max-w-2xl">
           Experience unparalleled sophistication in the heart of Miami. Our
-          vacation retreat blends elegance, and top-tier
-          amenities for the perfect getaway.
+          vacation retreat blends elegance, and top-tier amenities for the
+          perfect getaway.
         </p>
 
         {/* Desktop Booking Form */}
         <div className="mt-8 hidden md:flex flex-row items-center justify-start space-x-4 bg-[#222222] bg-opacity-70 p-4 rounded-lg max-w-fit">
-          <div className="flex items-center bg-[#2D2D2D] border border-[#888F9F] px-4 py-3 rounded-lg w-72 relative">
-            <input
-              type="date"
-              className="bg-transparent text-white w-full outline-none appearance-none [&::-webkit-calendar-picker-indicator]:invert"
-              placeholder="Arrive"
-            />
-          </div>
+          <Popover>
+            <PopoverTrigger asChild>
+              <div className="flex items-center bg-[#2D2D2D] border border-[#888F9F] px-4 py-3 rounded-lg w-72 relative cursor-pointer">
+                <Button
+                  variant="ghost"
+                  className="bg-transparent text-white w-full h-full flex justify-between items-center p-0"
+                >
+                  <span className="mr-2 font-normal">
+                    {arrivalDate
+                      ? format(arrivalDate, "PPP")
+                      : "Arrive Date"}
+                  </span>
+                  <CalendarIcon className="h-4 w-4 opacity-70" />
+                </Button>
+              </div>
+            </PopoverTrigger>
+            <PopoverContent className="w-auto p-0" align="start">
+              <Calendar
+                mode="single"
+                selected={arrivalDate}
+                onSelect={setArrivalDate}
+                initialFocus
+              />
+            </PopoverContent>
+          </Popover>
 
-          <div className="flex items-center bg-[#2D2D2D] border border-[#888F9F] px-4 py-3 rounded-lg w-72 relative">
-            <input
-              type="date"
-              className="bg-transparent text-white w-full outline-none appearance-none [&::-webkit-calendar-picker-indicator]:invert"
-              placeholder="Depart"
-            />
-          </div>
+          <Popover>
+            <PopoverTrigger asChild>
+              <div className="flex items-center bg-[#2D2D2D] border border-[#888F9F] px-4 py-3 rounded-lg w-72 relative cursor-pointer">
+                <Button
+                  variant="ghost"
+                  className="bg-transparent text-white w-full h-full flex justify-between items-center p-0"
+                >
+                  <span className="mr-2 font-normal">
+                    {departureDate
+                      ? format(departureDate, "PPP")
+                      : "Depart Date"}
+                  </span>
+                  <CalendarIcon className="h-4 w-4 opacity-70" />
+                </Button>
+              </div>
+            </PopoverTrigger>
+            <PopoverContent className="w-auto p-0" align="start">
+              <Calendar
+                mode="single"
+                selected={departureDate}
+                onSelect={setDepartureDate}
+                initialFocus
+              />
+            </PopoverContent>
+          </Popover>
 
-          <button className="bg-amber-600 hover:bg-amber-500 text-white px-6 py-3 rounded-lg">
+          <Button
+            className="bg-amber-600 hover:bg-amber-500 text-white px-6 py-3 rounded-lg w-full md:w-auto whitespace-nowrap font-medium"
+            style={{ minHeight: "46px" }}
+          >
             BOOK NOW
-          </button>
+          </Button>
         </div>
 
         {/* Mobile Check Availability Button */}
@@ -80,29 +131,71 @@ const HeroSection = () => {
               <div className="p-4 space-y-4">
                 <div className="space-y-2">
                   <label className="text-sm text-gray-400">Arrive</label>
-                  <input
-                    type="date"
-                    className="w-full bg-[#2D2D2D] border border-[#888F9F] p-3 rounded-lg text-white outline-none appearance-none [&::-webkit-calendar-picker-indicator]:invert"
-                  />
+                  <Popover>
+                    <PopoverTrigger asChild>
+                      <div className="w-full bg-[#2D2D2D] border border-[#888F9F] p-3 rounded-lg relative cursor-pointer">
+                        <Button
+                          variant="ghost"
+                          className="bg-transparent text-white w-full h-full flex justify-between items-center p-0"
+                        >
+                          <span className="mr-2 font-normal">
+                            {arrivalDate
+                              ? format(arrivalDate, "PPP")
+                              : "Select date"}
+                          </span>
+                          <CalendarIcon className="h-4 w-4 opacity-70" />
+                        </Button>
+                      </div>
+                    </PopoverTrigger>
+                    <PopoverContent className="w-auto p-0" align="start">
+                      <Calendar
+                        mode="single"
+                        selected={arrivalDate}
+                        onSelect={setArrivalDate}
+                        initialFocus
+                      />
+                    </PopoverContent>
+                  </Popover>
                 </div>
 
                 <div className="space-y-2">
                   <label className="text-sm text-gray-400">Depart</label>
-                  <input
-                    type="date"
-                    className="w-full bg-[#2D2D2D] border border-[#888F9F] p-3 rounded-lg text-white outline-none appearance-none [&::-webkit-calendar-picker-indicator]:invert"
-                  />
+                  <Popover>
+                    <PopoverTrigger asChild>
+                      <div className="w-full bg-[#2D2D2D] border border-[#888F9F] p-3 rounded-lg relative cursor-pointer">
+                        <Button
+                          variant="ghost"
+                          className="bg-transparent text-white w-full h-full flex justify-between items-center p-0"
+                        >
+                          <span className="mr-2 font-normal">
+                            {departureDate
+                              ? format(departureDate, "PPP")
+                              : "Select date"}
+                          </span>
+                          <CalendarIcon className="h-4 w-4 opacity-70" />
+                        </Button>
+                      </div>
+                    </PopoverTrigger>
+                    <PopoverContent className="w-auto p-0" align="start">
+                      <Calendar
+                        mode="single"
+                        selected={departureDate}
+                        onSelect={setDepartureDate}
+                        initialFocus
+                      />
+                    </PopoverContent>
+                  </Popover>
                 </div>
               </div>
 
               {/* Check Now Button */}
               <div className="mt-auto p-4">
-                <button
+                <Button
                   onClick={() => setIsModalOpen(false)}
                   className="w-full bg-amber-600 hover:bg-amber-500 text-white py-3 rounded-lg font-medium"
                 >
                   BOOK NOW
-                </button>
+                </Button>
               </div>
             </div>
           </div>
