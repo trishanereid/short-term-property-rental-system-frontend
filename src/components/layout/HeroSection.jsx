@@ -28,13 +28,13 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-black/50"></div>
 
       {/* Content */}
-      <div className="relative text-center md:text-center lg:text-center px-4">
+      <div className="relative flex flex-col items-center justify-center text-center md:text-center lg:text-center px-4">
         <h1 className="text-5xl md:text-7xl font-header">
           Luxury Living in
           <br />
           Miami
         </h1>
-        <p className="mt-4 text-xs md:text-xl max-w-2xl">
+        <p className="mt-4 text-xs md:text-xl max-w-2xl mx-auto">
           Experience unparalleled sophistication in the heart of Miami. Our
           vacation retreat blends elegance, and top-tier amenities for the
           perfect getaway.
@@ -50,9 +50,7 @@ const HeroSection = () => {
                   className="bg-transparent text-white w-full h-full flex justify-between items-center p-0"
                 >
                   <span className="mr-2 font-normal">
-                    {arrivalDate
-                      ? format(arrivalDate, "PPP")
-                      : "Arrive Date"}
+                    {arrivalDate ? format(arrivalDate, "PPP") : "Arrive Date"}
                   </span>
                   <CalendarIcon className="h-4 w-4 opacity-70" />
                 </Button>
