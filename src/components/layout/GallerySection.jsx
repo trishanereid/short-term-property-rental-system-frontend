@@ -1,11 +1,14 @@
-import { useState } from "react";
-
 import propertyImage1 from "../../assets/property-img/2.jpg";
 import propertyImage2 from "../../assets/property-img/4.jpg";
 import propertyImage3 from "../../assets/property-img/5.jpg";
-
-
-const cn = (...classes) => classes.filter(Boolean).join(" ");
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "../ui/carousel";
+import { Card } from "../ui/card";
 
 const galleryItems = [
   {
@@ -38,125 +41,48 @@ const galleryItems = [
     alt: "Luxury Bedroom",
     category: "Interiors",
   },
-  {
-    id: 6,
-    src: propertyImage3,
-    alt: "Yacht Charter",
-    category: "Gourmet Kitchen",
-  },
-  {
-    id: 7,
-    src: propertyImage1,
-    alt: "Yacht Charter",
-    category: "Interiors",
-  },
-  {
-    id: 8,
-    src: propertyImage2,
-    alt: "Yacht Charter",
-    category: "Gourmet Kitchen",
-  },
 ];
 
-const categories = ["All", ...new Set(galleryItems.map((item) => item.category))];
-
 const GallerySection = () => {
-  const [selectedImage, setSelectedImage] = useState(null);
-  const [selectedCategory, setSelectedCategory] = useState("All");
-  const [isFullscreen, setIsFullscreen] = useState(false);
-
-  const filteredItems =
-    selectedCategory === "All"
-      ? galleryItems
-      : galleryItems.filter((item) => item.category === selectedCategory);
-
-  const toggleFullscreen = () => {
-    setIsFullscreen(!isFullscreen);
-  };
-
   return (
-    <section className="py-20">
-      <div className="container mx-auto px-4">
-        <h2 className="mb-15 lg:mb-16 text-center text-3xl md:text-4xl lg:text-5xl font-header text-zinc-800 dark:text-white sm:text-4xl">
-          Our Luxury Collection
+    <div className="container mx-auto px-4 py-20">
+      <div className="mb-20 lg:mb-20 grid gap-8 lg:grid-cols-2">
+        <h2 className="text-4xl font-header tracking-tight text-white sm:text-5xl">
+          We make it easy for{" "}
+          <span className="text-amber-500">Effortless Booking</span> and{" "}
+          <span className="text-amber-500">Exclusive Benefits.</span>
         </h2>
-
-        {/* Category Filter */}
-        <div className="mb-8 flex flex-wrap justify-center gap-4">
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
-              className={cn(
-                "rounded-full px-4 py-2 text-sm transition-colors",
-                selectedCategory === category
-                  ? "bg-amber-500 text-white"
-                  : "bg-zinc-800 text-zinc-400 hover:bg-zinc-700"
-              )}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
-
-        {/* Gallery Grid */}
-        <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {filteredItems.map((item) => (
-            <div
-              key={item.id}
-              className="group relative aspect-square cursor-pointer overflow-hidden rounded-lg"
-              onClick={() => setSelectedImage(item.src)}
-            >
-              <img
-                src={item.src}
-                alt={item.alt}
-                className="absolute h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 transition-opacity duration-300 group-hover:bg-black/75">
-                <div className="flex h-full items-center justify-center">
-                  <p className="text-center text-lg font-semibold text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                    {item.alt}
-                  </p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Custom Modal/Lightbox */}
-        {selectedImage && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75">
-            <div 
-              className={cn(
-                "relative mx-4",
-                isFullscreen ? "h-screen w-screen" : "max-h-[90vh] max-w-4xl"
-              )}
-            >
-              <button
-                onClick={() => setSelectedImage(null)}
-                className="absolute -right-4 -top-4 z-50 rounded-full bg-white p-2 text-black hover:bg-gray-200"
-              >
-                ✕
-              </button>
-              <button
-                onClick={toggleFullscreen}
-                className="absolute -right-4 top-8 z-50 rounded-full bg-white p-2 text-black hover:bg-gray-200"
-              >
-                {isFullscreen ? "↙" : "↗"}
-              </button>
-              <img
-                src={selectedImage}
-                alt="Selected"
-                className={cn(
-                  "h-full w-full object-contain",
-                  isFullscreen ? "" : "rounded-lg"
-                )}
-              />
-            </div>
-          </div>
-        )}
+        <p className="text-lg leading-relaxed text-zinc-400">
+          Whether you are planning your next getaway or seeking the perfect
+          luxury retreat, we make the process seamless and hassle-free. The best
+          part? You’ll enjoy exclusive perks and premium comfort with every
+          stay.
+        </p>
       </div>
-    </section>
+      {/* Gallery Grid */}
+      <Carousel className="w-full max-w-xs sm:max-w-full mx-auto">
+        <CarouselContent className="-ml-0.5 sm:-ml-1">
+          {galleryItems.map((item) => (
+            <CarouselItem
+              key={item.id}
+              className="pl-0.5 sm:pl-1 basis-full sm:basis-1/2 lg:basis-1/3"
+            >
+              <div className="sm:p-1">
+                <Card className="overflow-hidden p-0">
+                  <img
+                    src={item.src}
+                    alt={item.alt}
+                    className="object-cover w-full h-full aspect-square"
+                  />
+                </Card>
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious className="hidden sm:flex" />
+        <CarouselNext className="hidden sm:flex" />
+      </Carousel>
+    </div>
   );
 };
 
