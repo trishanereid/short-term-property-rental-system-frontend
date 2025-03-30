@@ -12,11 +12,12 @@ import Login from "./pages/Login";
 import Property from "./pages/Property";
 import Contact from "./pages/Contact";
 import Register from "./pages/Register";
+import { ThemeProvider } from "./components/theme-provider";
 
 function AppContent() {
   const location = useLocation();
   const hideNavbarPaths = ["/login", "/property", "/signup"];
-  
+
   return (
     <>
       {!hideNavbarPaths.includes(location.pathname) && <Navbar />}
@@ -35,9 +36,11 @@ function AppContent() {
 
 function App() {
   return (
-    <Router>
-      <AppContent />
-    </Router>
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+      <Router>
+        <AppContent />
+      </Router>
+    </ThemeProvider>
   );
 }
 
